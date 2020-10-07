@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController restorationIdentifier="AfterVC" storyboardIdentifier="AfterVC" id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController restorationIdentifier="AfterVC" storyboardIdentifier="AfterVC" id="BYZ-38-t0r" customClass="ViewController" customModule="CafeSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                 <items>
                                     <barButtonItem systemItem="camera" id="ahM-ss-fXK">
                                         <connections>
-                                            <action selector="cameraBtn:" destination="BYZ-38-t0r" id="3kF-Qs-Snr"/>
+                                            <action selector="cameraBtn:" destination="BYZ-38-t0r" id="HgD-lm-CHy"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem systemItem="organize" id="gIx-34-oPb"/>
@@ -32,10 +32,15 @@
                                             <action selector="saveBtn:" destination="BYZ-38-t0r" id="9pE-Bl-5BF"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem systemItem="action" id="ceK-aS-1qR">
-                                        <connections>
-                                            <action selector="downloadBtn:" destination="BYZ-38-t0r" id="e3F-K2-ubo"/>
-                                        </connections>
+                                    <barButtonItem style="plain" id="YRd-aS-iWK">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tnD-Bk-WSU">
+                                            <rect key="frame" x="126" y="7" width="118" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="CameraButton:" destination="MoY-HR-l6d" eventType="touchUpInside" id="fqC-Wb-tGk"/>
+                                            </connections>
+                                        </button>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -47,7 +52,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLE-4z-fCO">
-                                <rect key="frame" x="109" y="573" width="118" height="30"/>
+                                <rect key="frame" x="146" y="608" width="118" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -67,8 +72,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="kcx-At-Pks" id="r5i-Gf-q2c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="MoY-HR-l6d" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
         </scene>
@@ -84,6 +93,11 @@
                                 <rect key="frame" x="241" y="20" width="173" height="287"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWO-vY-6fQ">
+                                <rect key="frame" x="184" y="343" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="f1R-BO-LDO"/>
