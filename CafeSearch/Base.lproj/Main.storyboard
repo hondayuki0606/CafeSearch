@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController restorationIdentifier="AfterVC" storyboardIdentifier="AfterVC" id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0DB-gV-UvN">
+                                <rect key="frame" x="0.0" y="821" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="27f-Cn-y3F"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="ahM-ss-fXK">
+                                        <connections>
+                                            <action selector="cameraBtn:" destination="BYZ-38-t0r" id="3kF-Qs-Snr"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="organize" id="gIx-34-oPb"/>
+                                    <barButtonItem systemItem="action" id="B6g-ex-dw6">
+                                        <connections>
+                                            <action selector="saveBtn:" destination="BYZ-38-t0r" id="9pE-Bl-5BF"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="action" id="ceK-aS-1qR">
+                                        <connections>
+                                            <action selector="downloadBtn:" destination="BYZ-38-t0r" id="e3F-K2-ubo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="226" verticalHuggingPriority="251" horizontalCompressionResistancePriority="756" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kcx-At-Pks">
+                                <rect key="frame" x="55" y="95" width="300" height="300"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="xr1-3T-7Tl"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLE-4z-fCO">
+                                <rect key="frame" x="109" y="573" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="5Jd-31-j0z" kind="show" id="uT0-IQ-jIT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="0DB-gV-UvN" secondAttribute="bottom" constant="-3" id="1TP-LZ-JxE"/>
+                            <constraint firstItem="0DB-gV-UvN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1UQ-lc-PyQ"/>
+                            <constraint firstItem="kcx-At-Pks" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="75" id="4oS-yS-YWM"/>
+                            <constraint firstItem="0DB-gV-UvN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C7a-eK-Z2d"/>
+                            <constraint firstItem="0DB-gV-UvN" firstAttribute="centerX" secondItem="kcx-At-Pks" secondAttribute="centerX" id="PC8-g3-rfx"/>
+                            <constraint firstItem="kcx-At-Pks" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="29" id="S4i-sI-IHD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kcx-At-Pks" secondAttribute="trailing" constant="49" id="nWr-uX-EdR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V4x-VA-kyb">
+            <objects>
+                <viewController restorationIdentifier="goNext" storyboardIdentifier="goNext" id="5Jd-31-j0z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BAx-8q-vZW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfd-Dh-9eZ">
+                                <rect key="frame" x="241" y="20" width="173" height="287"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="f1R-BO-LDO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bLO-12-iGD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLO-El-9sN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962.31884057971024" y="91.741071428571431"/>
+        </scene>
+    </scenes>
+</document>
