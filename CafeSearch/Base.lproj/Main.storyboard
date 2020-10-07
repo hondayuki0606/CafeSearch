@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller2-->
         <scene sceneID="V4x-VA-kyb">
             <objects>
-                <viewController restorationIdentifier="goNext" storyboardIdentifier="goNext" id="5Jd-31-j0z" sceneMemberID="viewController">
+                <viewController restorationIdentifier="goNext" storyboardIdentifier="goNext" id="5Jd-31-j0z" customClass="ViewController2" customModule="CafeSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BAx-8q-vZW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +97,9 @@
                                 <rect key="frame" x="184" y="343" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="test:" destination="5Jd-31-j0z" eventType="touchUpInside" id="GdT-xT-3Ov"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

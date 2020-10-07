@@ -16,6 +16,7 @@
 		AF4E06A525023ADC007EBD62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4E06A325023ADC007EBD62 /* LaunchScreen.storyboard */; };
 		AF4E06B025023ADD007EBD62 /* CafeSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E06AF25023ADD007EBD62 /* CafeSearchTests.swift */; };
 		AF4E06BB25023ADD007EBD62 /* CafeSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4E06BA25023ADD007EBD62 /* CafeSearchUITests.swift */; };
+		AF8642AC252E20BB0054153A /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8642AB252E20BB0054153A /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		AF4E06B625023ADD007EBD62 /* CafeSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafeSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4E06BA25023ADD007EBD62 /* CafeSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeSearchUITests.swift; sourceTree = "<group>"; };
 		AF4E06BC25023ADD007EBD62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF8642AB252E20BB0054153A /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		AFBF9C1A2509478C003BF34D /* config.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = config.php; sourceTree = "<group>"; };
 		AFBF9C1D25094A25003BF34D /* input_do.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = input_do.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 			children = (
 				AFBF9C17250945C7003BF34D /* WebService */,
 				AF4E069825023ADB007EBD62 /* AppDelegate.swift */,
+				AF8642AB252E20BB0054153A /* ViewController2.swift */,
 				AF4E069A25023ADB007EBD62 /* SceneDelegate.swift */,
 				AF4E069C25023ADB007EBD62 /* ViewController.swift */,
 				AF4E069E25023ADB007EBD62 /* Main.storyboard */,
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF8642AC252E20BB0054153A /* ViewController2.swift in Sources */,
 				AF4E069D25023ADB007EBD62 /* ViewController.swift in Sources */,
 				AF4E069925023ADB007EBD62 /* AppDelegate.swift in Sources */,
 				AF4E069B25023ADB007EBD62 /* SceneDelegate.swift in Sources */,
