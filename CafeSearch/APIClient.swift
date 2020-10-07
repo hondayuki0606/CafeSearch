@@ -40,6 +40,10 @@ class APIClient {
             }
         }
 
+        // downloadTasl 実行例
+        // let downtask = URLSession.shared.downloadTask(with: "https://"){
+            
+        //}
         task.resume()
 
 
