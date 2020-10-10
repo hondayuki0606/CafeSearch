@@ -71,16 +71,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfd-Dh-9eZ">
-                                <rect key="frame" x="241" y="20" width="173" height="287"/>
+                                <rect key="frame" x="241" y="108" width="173" height="287"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWO-vY-6fQ">
-                                <rect key="frame" x="157" y="341" width="107" height="38"/>
+                                <rect key="frame" x="241" y="52" width="129" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="投稿ボタン"/>
+                                <state key="normal" title="アップロード">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
                                 <connections>
-                                    <action selector="test:" destination="5Jd-31-j0z" eventType="touchUpInside" id="GdT-xT-3Ov"/>
+                                    <action selector="upload:" destination="5Jd-31-j0z" eventType="touchUpInside" id="KPY-A1-RHl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,6 +92,7 @@
                     <navigationItem key="navigationItem" id="bLO-12-iGD"/>
                     <connections>
                         <outlet property="imageView" destination="cfd-Dh-9eZ" id="aG0-1e-3Wr"/>
+                        <outlet property="uploadBtn" destination="jWO-vY-6fQ" id="f4D-DX-IFV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLO-El-9sN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
