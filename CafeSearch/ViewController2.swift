@@ -10,16 +10,28 @@ import UIKit
 
 class ViewController2: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet weak var recieveImage: UIImageView!
-    var postImage:UIImage?
-    @IBOutlet weak var imageView: UIImageView!
-    
     let URL_SAVE_BOY = "http://10.207.171.16:8081/laravelapp/public/input_do.php"
-    var activityIndicatorView = UIActivityIndicatorView()
+    
+    @IBOutlet weak var imageView: UIImageView!
+    //UITextField Set Propaties
+    @IBOutlet weak var userId: UITextField!
     //Button　action Method
-    @IBOutlet weak var NameFeild: UITextField!
-    @IBOutlet weak var oldFeild: UITextField!
-    @IBOutlet weak var downloadBtn: UIButton!
+    @IBOutlet weak var commentFeild: UITextField!
+    @IBOutlet weak var hashBtn: UIButton!
+    @IBOutlet weak var friendBtn: UIButton!
+    
+    @IBAction func hashBtn(_ sender: UIButton) {
+        var comments = comment.text!
+        comments.append("#")
+        comment.text = comments
+    }
+    
+    @IBOutlet weak var comment: UITextView!
+    @IBAction func friendBtn(_ sender: UIButton) {
+        var comments = comment.text!
+        comments.append("@")
+        comment.text = comments
+    }
     
     @IBOutlet weak var uploadBtn: UIButton!
     @IBAction func upload(_ sender: Any) {
@@ -28,16 +40,36 @@ class ViewController2: UIViewController, UIImagePickerControllerDelegate, UINavi
         
         // OKボタンの実装
         let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default){ (action: UIAlertAction) in
+            // TextFieldから文字を取得
+            //textFieldString = textField.text!
+            let comments = self.commentFeild.text!
+            // ハッシュ情報作成
+            let hashArray = comments.split(separator: "#")
+            var hashData = ""
+            let hashTag = "#"
+            for hash in hashArray{
+                hashData = String(format: "%@%@,",hashTag,hash as CVarArg)
+            }
+            let formatHashData = hashData.dropLast()
+            
+            // フレンド情報作成
+            let friendArray = comments.split(separator: "@")
+            var friendData = ""
+            let friendTag = "@"
+            for friend in friendArray{
+                friendData = String(format: "%@%@,",friendTag,friend as CVarArg)
+            }
+            let friendHashData = friendData.dropLast()
             
             // OKがクリックされた時の処理
             let client = APIClient()
-            let parameters:[String: Any]  = ["user_id":  "hondayuki0606",
+            let parameters:[String: Any]  = ["user_id": "hondayuki0606",
                                              "lat": 23.77,
                                              "lot": 99.222,
-                                             "comment":  "コメント情報",
-                                             "hash_tag": "#カフェ",
-                                             "user_tag": "@hondayuki0606",
-                                             "image":     self.imageView.image!]
+                                             "comment":  comments,
+                                             "hash_tag": formatHashData,
+                                             "user_tag": friendHashData,
+                                             "image": self.imageView.image!]
             // サーバー処理実施
             client.multipartPost(urlString: self.URL_SAVE_BOY, parameters: parameters)
             
