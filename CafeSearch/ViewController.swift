@@ -88,17 +88,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                    self.present(picker, animated: true)
                }
     }
-    // カメラ撮影ボタン
-    @IBAction func cameraBtn2(_ sender: UIBarButtonItem) {
-
-    }
     
+       @IBOutlet weak var textField:UITextField!
+    
+    // カメラ撮影ボタン
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         self.imageView.image = image
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
         self.dismiss(animated: true)
+
+        // 次画面遷移
+        let next = storyboard!.instantiateViewController(withIdentifier: "goNext") as? ViewController2
+        let _ = next?.view // ** hack code **
+        next?.imageView.image = image
+        self.present(next!,animated: true, completion: nil)
     }
     
     @IBAction func cameraBtn(_ sender: UIBarButtonItem) {
@@ -109,6 +114,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             picker.sourceType = sourceType
             picker.delegate = self
             self.present(picker, animated: true)
+
+            //self.performSegue(withIdentifier: "goNext", sender: self)
         }
         
     }

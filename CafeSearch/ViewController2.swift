@@ -14,24 +14,13 @@ class ViewController2: UIViewController, UIImagePickerControllerDelegate, UINavi
     var postImage:UIImage?
     @IBOutlet weak var imageView: UIImageView!
     
-    //URL to our web service
-    //let URL_SAVE_BOY = "http://[Your ip Address]/MyWebService/api/createteam.php"
-    
     let URL_SAVE_BOY = "http://10.207.171.16:8081/laravelapp/public/input_do.php"
     var activityIndicatorView = UIActivityIndicatorView()
     //Button　action Method
     @IBOutlet weak var NameFeild: UITextField!
     @IBOutlet weak var oldFeild: UITextField!
     @IBOutlet weak var downloadBtn: UIButton!
-    @IBAction func downloadBtn(_ sender: UIBarButtonItem) {
-    
-        print("test")
-    }
-   // UIBarButtonItem!
-    
-    @IBAction func test(_ sender: UIButton) {
-            print("test")
-    }
+
     
     @IBOutlet weak var saveBtn: UIButton!
     @IBAction func saveBtn(_ sender: UIBarButtonItem) {
@@ -61,10 +50,6 @@ class ViewController2: UIViewController, UIImagePickerControllerDelegate, UINavi
             // サーバー処理実施
             client.multipartPost(urlString: self.URL_SAVE_BOY, parameters: parameters)
             
-            // インジケーターを非表示＆アニメーション終了
-            self.activityIndicatorView.stopAnimating() //ローディング止める
-            
- //           performSegue(withIdentifier: "goNext", sender: nil)
         }
  
         // CANCELボタンの実装
@@ -77,43 +62,6 @@ class ViewController2: UIViewController, UIImagePickerControllerDelegate, UINavi
         // アラートの表示
         present(alertController,animated: true,completion: nil)
     
-    }
-    
-    // imageを選ぶボタン
-    @IBOutlet weak var liblaryBtn: UIBarButtonItem!
-    @IBAction func CameraButton(_ sender: UIButton) {
-        let sourceType:UIImagePickerController.SourceType = UIImagePickerController.SourceType.camera
-
-               if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera){
-                   let picker = UIImagePickerController()
-                   picker.sourceType = sourceType
-                   picker.delegate = self
-                   self.present(picker, animated: true)
-               }
-    }
-    // カメラ撮影ボタン
-    @IBAction func cameraBtn2(_ sender: UIBarButtonItem) {
-
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        self.imageView.image = image
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-        self.dismiss(animated: true)
-    }
-    
-    @IBAction func cameraBtn(_ sender: UIBarButtonItem) {
-        let sourceType:UIImagePickerController.SourceType = UIImagePickerController.SourceType.camera
-
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera){
-            let picker = UIImagePickerController()
-            picker.sourceType = sourceType
-            picker.delegate = self
-            self.present(picker, animated: true)
-        }
-        
     }
     
     override func viewDidLoad() {

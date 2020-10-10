@@ -107,9 +107,9 @@
 			children = (
 				AFBF9C17250945C7003BF34D /* WebService */,
 				AF4E069825023ADB007EBD62 /* AppDelegate.swift */,
-				AF8642AB252E20BB0054153A /* ViewController2.swift */,
 				AF4E069A25023ADB007EBD62 /* SceneDelegate.swift */,
 				AF4E069C25023ADB007EBD62 /* ViewController.swift */,
+				AF8642AB252E20BB0054153A /* ViewController2.swift */,
 				AF4E069E25023ADB007EBD62 /* Main.storyboard */,
 				AF4E06A125023ADC007EBD62 /* Assets.xcassets */,
 				AF4E06A325023ADC007EBD62 /* LaunchScreen.storyboard */,

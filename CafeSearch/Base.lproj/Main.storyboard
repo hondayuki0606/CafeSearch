@@ -32,16 +32,6 @@
                                             <action selector="saveBtn:" destination="BYZ-38-t0r" id="9pE-Bl-5BF"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" id="YRd-aS-iWK">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tnD-Bk-WSU">
-                                            <rect key="frame" x="126" y="7" width="118" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
-                                            <connections>
-                                                <action selector="CameraButton:" destination="MoY-HR-l6d" eventType="touchUpInside" id="fqC-Wb-tGk"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="226" verticalHuggingPriority="251" horizontalCompressionResistancePriority="756" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kcx-At-Pks">
@@ -51,14 +41,6 @@
                                     <constraint firstAttribute="height" constant="300" id="xr1-3T-7Tl"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLE-4z-fCO">
-                                <rect key="frame" x="146" y="608" width="118" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="5Jd-31-j0z" kind="show" id="uT0-IQ-jIT"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -77,16 +59,15 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="MoY-HR-l6d" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="91.741071428571431"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="V4x-VA-kyb">
             <objects>
-                <viewController restorationIdentifier="goNext" storyboardIdentifier="goNext" id="5Jd-31-j0z" customClass="ViewController2" customModule="CafeSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goNext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Jd-31-j0z" customClass="ViewController2" customModule="CafeSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BAx-8q-vZW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfd-Dh-9eZ">
@@ -94,9 +75,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWO-vY-6fQ">
-                                <rect key="frame" x="184" y="343" width="46" height="30"/>
+                                <rect key="frame" x="157" y="341" width="107" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="投稿ボタン"/>
                                 <connections>
                                     <action selector="test:" destination="5Jd-31-j0z" eventType="touchUpInside" id="GdT-xT-3Ov"/>
                                 </connections>
@@ -106,6 +88,9 @@
                         <viewLayoutGuide key="safeArea" id="f1R-BO-LDO"/>
                     </view>
                     <navigationItem key="navigationItem" id="bLO-12-iGD"/>
+                    <connections>
+                        <outlet property="imageView" destination="cfd-Dh-9eZ" id="aG0-1e-3Wr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aLO-El-9sN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
